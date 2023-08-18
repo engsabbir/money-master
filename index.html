@@ -25,7 +25,7 @@
         <div class="w-full md:w-3/5">
             <img src="./assets/money.jpeg" alt="money" class="w-full h-[90vh] rounded">
         </div>
-        <div class="border border-black w-full md:w-2/5 text-center">
+        <div class="w-full md:w-2/5 text-center">
             <h1 class="text-2xl text-center font-medium mb-5">Income</h1>
 
             <h2>Income: <input id="income-input" class="bg-gray-200 rounded text-black focus:outline-none" type="number"
@@ -39,18 +39,19 @@
             <h2>Clothes: <input id="clothes-cost" class="bg-gray-200 rounded text-black focus:outline-none mx-auto right-0" type="number"
                     placeholder="Clothes"></h2>
 
-            <button class="bg-sky-500 text-white py-2 px-3 rounded font-medium">Calculate</button>
+            <button onclick="calculateMoney()" class="bg-sky-500 text-white py-2 px-3 rounded font-medium">Calculate</button>
 
-            <h1 class="text-xl font-medium mt-5">Total Expense: <span id="total-expense"></span></h1>
-            <h1 class="text-xl font-medium">Total Balance: <span id="total-balance"></span></h1>
-            <h2 class="font-medium mt-5">Save: <input id="saved-ratio" class="bg-gray-200 rounded text-black focus:outline-none" type="number" placeholder="Rent"> % <button class="bg-sky-500 px-3 py-2 mr-5 rounded font-semibold text-white">Save</button></h2>
+            <h1 class="text-xl font-medium mt-5">Total Expense: <span id="total-expense">0</span>&#2547</h1>
+            <h1 class="text-xl font-medium">Total Balance: <span id="total-balance">0</span>&#2547</h1>
+            <h2 class="font-medium mt-5">Save: <input id="save-ratio" class="bg-gray-200 rounded text-black focus:outline-none" type="number" placeholder="Rent"> % <button onclick="saveMoney()" id="save-btn" class="bg-sky-500 px-3 py-2 mr-5 rounded font-semibold text-white">Save</button></h2>
 
-            <h1 class="text-xl font-medium mt-5">Saving Amount: <span id="total-saving"></span></h1>
-            <h1 class="text-xl font-medium mt-5">Remaining Balance: <span id="remaning-balance"></span></h1>
+            <h1 class="text-xl font-medium mt-5">Saving Amount: <span id="total-saving">0</span>&#2547</h1>
+            <h1 class="text-xl font-medium mt-5">Remaining Balance: <span id="remaining-balance">0</span>&#2547</h1>
         </div>
     </main>
 
     <script src="./js/common.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
