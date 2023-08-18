@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money Master</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
+
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
 </head>
-<body class="max-w-screen-xl">
+
+<body class="max-w-screen-xl mx-auto">
     <header class="mt-5">
-        <h1 class="text-center text-2xl md:text-3xl lg:text-5xl font-medium text-[#31A5AC]">Money Master💰</h1>
+        <h1 class="text-center text-2xl md:text-3xl lg:text-4xl font-medium text-[#31A5AC]">Money Master💰</h1>
     </header>
-    <main></main>
+    <main class="flex flex-col md:flex-row gap-10 mt-5 md:mt-10 px-14">
+        <div class="w-full md:w-3/5">
+            <img src="./assets/money.jpeg" alt="money" class="w-full h-[90vh] rounded">
+        </div>
+        <div class="border border-black w-full md:w-2/5 text-center">
+            <h1 class="text-2xl text-center font-medium mb-5">Income</h1>
+
+            <h2>Income: <input id="income-input" class="bg-gray-200 rounded text-black focus:outline-none" type="number"
+                    placeholder="Income"></h2>
+
+            <h1 class="text-2xl text-center font-medium mb-3">Expense</h1>
+            <h2>Food: <input id="food-cost" class="bg-gray-200 rounded text-black focus:outline-none" type="number" placeholder="Food">
+            </h2>
+            <h2>Rent: <input id="rent-cost" class="bg-gray-200 rounded text-black focus:outline-none" type="number" placeholder="Rent">
+            </h2>
+            <h2>Clothes: <input id="clothes-cost" class="bg-gray-200 rounded text-black focus:outline-none mx-auto right-0" type="number"
+                    placeholder="Clothes"></h2>
+
+            <button class="bg-sky-500 text-white py-2 px-3 rounded font-medium">Calculate</button>
+
+            <h1 class="text-xl font-medium mt-5">Total Expense: <span id="total-expense"></span></h1>
+            <h1 class="text-xl font-medium">Total Balance: <span id="total-balance"></span></h1>
+            <h2 class="font-medium mt-5">Save: <input id="saved-ratio" class="bg-gray-200 rounded text-black focus:outline-none" type="number" placeholder="Rent"> % <button class="bg-sky-500 px-3 py-2 mr-5 rounded font-semibold text-white">Save</button></h2>
+
+            <h1 class="text-xl font-medium mt-5">Saving Amount: <span id="total-saving"></span></h1>
+            <h1 class="text-xl font-medium mt-5">Remaining Balance: <span id="remaning-balance"></span></h1>
+        </div>
+    </main>
+
+    <script src="./js/common.js"></script>
 </body>
+
 </html>
